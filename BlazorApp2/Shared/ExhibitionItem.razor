@@ -1,0 +1,29 @@
+﻿@using BlazorApp2.Data.Dtos
+
+@if (exhibitionItem != null)
+{
+	<div class="container mb-4 d-flex">
+		<div class="container-fluid m-0 text-center">
+			<img class="exhibit-image" src="@exhibitionItem.ImageUrl" alt="@exhibitionItem.Name">
+			<h2>@exhibitionItem.Name</h2>
+		</div>
+		<div class="container-fluid">
+			<h3 class="description-title">Описание</h3>
+			<p>@exhibitionItem.Description</p>
+			<a class="btn" href="/exhibition/@exhibitionItem.ExhibitionId">Билеты и инофрмация о выставке</a>
+		</div>
+	</div>
+	<div class="container">
+		<h3 class="full-description-title">Подбробное описание</h3>
+		<p class="full-description">@exhibitionItem.FullDescription</p>
+	</div>
+}
+else
+{
+	<div class="spinner"></div>
+}
+
+@code {
+    [Parameter]
+    public ExhibitionItemDto? exhibitionItem { get; set; }
+}

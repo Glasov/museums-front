@@ -1,0 +1,59 @@
+/* _content/BlazorApp2/Shared/ExhibitionItem.razor.rz.scp.css */
+img.exhibit-image[b-anc9xm1pfn] {
+    width: 500px;
+    border: 16px ridge #795548;
+}
+
+.full-description[b-anc9xm1pfn] {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+/* _content/BlazorApp2/Shared/ExhibitionItemPreview.razor.rz.scp.css */
+div.exhibition-item[b-1slmln10xh] {
+    border: 1px double black;
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+/* _content/BlazorApp2/Shared/Footer.razor.rz.scp.css */
+footer[b-oxf9p3ct5a] {
+    color: whitesmoke;
+    background: #000000;
+}
+/* _content/BlazorApp2/Shared/MainLayout.razor.rz.scp.css */
+main[b-g438hy8nqh] {
+    padding-bottom: 30px;
+}
+/* _content/BlazorApp2/Shared/NavMenu.razor.rz.scp.css */
+nav.navbar[b-8klt50xt3z] {
+    background: #F44336;
+}
+
+img.logo[b-8klt50xt3z] {
+    width: 40px;
+}
+
+ul.nav li a[b-8klt50xt3z],
+ul.nav li a:visited[b-8klt50xt3z] {
+    color: whitesmoke;
+}
+
+ul.nav li a:hover[b-8klt50xt3z] {
+    color: lightgray;
+}
+/* _content/BlazorApp2/Shared/OrderInfo.razor.rz.scp.css */
+img.exhibit-image[b-glzia9fe7i] {
+    width: 500px;
+    border: 16px ridge #795548;
+}
+
+.full-description[b-glzia9fe7i] {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}

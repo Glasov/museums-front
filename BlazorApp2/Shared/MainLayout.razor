@@ -1,0 +1,35 @@
+﻿@using BlazorApp2.Managers
+@inherits LayoutComponentBase
+
+<PageTitle>Музеи и выставки</PageTitle>
+
+@if (authManager != null)
+{
+    <div class="page">
+        <CascadingValue Value="@authManager">
+            <NavMenu/>
+            <main>
+                <article class="content px-4">
+                    @Body
+                </article>
+            </main>
+            <Footer/>
+        </CascadingValue>
+    </div>
+}
+
+@code {
+    private bool HasRendered { get; set; }
+    private AuthManager authManager { get; set; }
+    protected override void OnInitialized() {
+        authManager = new();
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            HasRendered = true;
+            StateHasChanged();
+        }
+    }
+}

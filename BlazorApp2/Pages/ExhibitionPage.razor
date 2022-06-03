@@ -1,0 +1,19 @@
+﻿@page "/exhibition/{ExhibitionId}"
+@using BlazorApp2.Data.Dtos
+@using BlazorApp2.Services
+
+<PageTitle>Выставка</PageTitle>
+
+<Exhibition exhibition=@Exhibition/>
+
+@code {
+    [Parameter]
+    public string? ExhibitionId { get; set; }
+    private ExhibitionDto? Exhibition { get; set; }
+    [Inject]
+    private IExhibitionsProvider ExhibitionsProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Exhibition = await ExhibitionsProvider.GetById(Int32.Parse(ExhibitionId));
+    }
+}

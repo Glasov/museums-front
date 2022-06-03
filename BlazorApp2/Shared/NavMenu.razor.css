@@ -1,0 +1,16 @@
+nav.navbar {
+    background: #F44336;
+}
+
+img.logo {
+    width: 40px;
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: whitesmoke;
+}
+
+ul.nav li a:hover {
+    color: lightgray;
+}

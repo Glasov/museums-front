@@ -1,0 +1,19 @@
+﻿@using BlazorApp2.Data.Dtos
+<div id="gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    @if (exhibitionItems != null)
+    {
+        @foreach (var exhibitionItem in exhibitionItems)
+        {
+            <ExhibitionItemPreview exhibitionItem=@exhibitionItem/>
+        }
+    }
+    else
+    {
+        <div class="spinner"></div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public List<ExhibitionItemDto>? exhibitionItems { get; set; }
+}

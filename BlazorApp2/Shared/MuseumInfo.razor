@@ -1,0 +1,17 @@
+﻿@using BlazorApp2.Data.Dtos
+
+@if (Museum != null)
+{
+    <div class="container-fluid">
+        <h3>@Museum.Name</h3>
+        <p>@Museum.Description</p>
+    </div>
+} else
+{
+    <div class="spinner"></div>
+}
+
+@code {
+    [Parameter]
+    public MuseumDto? Museum { get; set; }
+}

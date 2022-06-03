@@ -1,0 +1,46 @@
+﻿@using BlazorApp2.Data.Dtos
+@using BlazorApp2.Managers
+@using BlazorApp2.Services
+
+@if (_orderDto != null)
+{
+	<tr>
+		@if (authManager.IsAdmin())
+		{
+			<td>@_orderDto.Id</td>
+		}
+		<td>@_exhibitionDto.Name</td>
+		<td>@UnixTimeStampToDateTime(_orderDto.CreationTimestamp)</td>
+		<td>@_orderDto.Discount</td>
+		<td>@_orderDto.Cost</td>
+	</tr>
+}
+else
+{
+	<div class="spinner"></div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+	[Inject]
+	private IOrdersProvider OrdersProvider { get; set; }
+	[Inject]
+	private IExhibitionsProvider ExhibitionsProvider { get; set; }
+	[CascadingParameter]
+	public AuthManager authManager { get; set; }
+	
+	private OrderDto? _orderDto { get; set; }
+	private ExhibitionDto? _exhibitionDto { get; set; }
+	
+	protected override async Task OnInitializedAsync()
+	{
+		_orderDto = await OrdersProvider.GetById(Id);
+		_exhibitionDto = await ExhibitionsProvider.GetById(_orderDto.ExhibitionId);
+	}
+	
+	public static DateTime UnixTimeStampToDateTime(long unixTimeStamp)
+	{
+		return DateTimeOffset.FromUnixTimeMilliseconds(unixTimeStamp).DateTime;
+	}
+}

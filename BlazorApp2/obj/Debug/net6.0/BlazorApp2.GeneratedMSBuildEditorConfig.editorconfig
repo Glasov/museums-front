@@ -1,0 +1,112 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorApp2
+build_property.RootNamespace = BlazorApp2
+build_property.ProjectDir = C:\Users\aglus\RiderProjects\BlazorApp2\BlazorApp2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\aglus\RiderProjects\BlazorApp2\BlazorApp2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/CatalogPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/ExhibitionItemPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhoaWJpdGlvbkl0ZW1QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/ExhibitionPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhoaWJpdGlvblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/PofilePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9maWxlUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/RegistrationPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/CatalogGallery.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhdGFsb2dHYWxsZXJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/Exhibition.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aGliaXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/LoginForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/MuseumInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE11c2V1bUluZm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/RegistrationForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZ2lzdHJhdGlvbkZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/UserProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJQcm9maWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/ExhibitionItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aGliaXRpb25JdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-anc9xm1pfn
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/ExhibitionItemPreview.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aGliaXRpb25JdGVtUHJldmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1slmln10xh
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-oxf9p3ct5a
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-g438hy8nqh
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8klt50xt3z
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Shared/OrderInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE9yZGVySW5mby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-glzia9fe7i
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aglus/RiderProjects/BlazorApp2/BlazorApp2/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

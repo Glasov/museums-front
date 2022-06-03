@@ -1,0 +1,50 @@
+﻿@using BlazorApp2.Services
+@using BlazorApp2.Managers
+
+<nav class="navbar navbar-expand-sm sticky-top">
+	<a class="navbar-brand text-white m-2" href="/">
+		<img class="logo" src="images/logo.png" alt="logo">
+		БМВ
+	</a>
+	<div class="container-fluid navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li><a class="nav-link" href="/">Главная</a></li>
+			<li><a class="nav-link" href="/catalog">Каталог</a></li>
+		</ul>
+		@if (!authManager.IsAuthorized())
+		{
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="nav-link" href="/login">Вход</a></li>
+				<li>
+					<div class="btn-nav">
+						<a class="btn btn-primary btn-small navbar-btn" href="/register">Регистрация</a>
+					</div>
+				</li>
+			</ul>
+		}
+		else
+		{
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="btn-link" href="/profile">Профиль</a></li>
+				@if (authManager.IsAdmin())
+				{
+					<li><p>Поздравляю, вы - админ!</p></li>
+				}
+				<li><button class="btn btn-primary btn-small navbar-btn" onclick=@Logout>Выйти</button></li>
+			</ul>
+		}
+	</div>
+</nav>
+
+@code {
+	[CascadingParameter]
+	public AuthManager authManager { get; set; }
+	[Inject]
+	private IAuthService AuthService { get; set; }
+
+	private void Logout()
+	{
+		authManager.Logout();
+		StateHasChanged();
+	}
+}

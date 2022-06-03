@@ -1,0 +1,72 @@
+﻿@using BlazorApp2.Data.Dtos
+@using System.Runtime.InteropServices
+@using BlazorApp2.Managers
+@using BlazorApp2.Services
+
+@if (exhibition != null && !loading)
+{
+    <div class="container-fluid d-flex">
+        <div class="container">
+            <h2>@exhibition.Name</h2>
+            <div class="d-flex">
+                <p>Дата начала: @UnixTimeStampToDateTime(exhibition.StartTimestamp)</p>
+            </div>
+            <div class="d-flex">
+                <p>Дата конца: @UnixTimeStampToDateTime(exhibition.EndTimestamp)</p>
+            </div>
+            <h3 class="description-title">Описание</h3>
+            <p>@exhibition.Description</p>
+        </div>
+        <div class="container">
+            <h3>Приобрести билеты</h3>
+            @if (authManager.IsAuthorized())
+            {
+                <div class="container-fluid">
+                    <p>Цена: @exhibition.Cost</p>
+                    <button class="btn btn-outline-info" onclick=@AddOrder>Купить в 1 клик</button>
+                </div>
+            }
+            else
+            {
+                <p>Необходимо войти в учётную записать</p>
+            }
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h2>Информация о музее</h2>
+        <MuseumInfo Museum=@exhibition.Museum />
+    </div>
+}
+else
+{
+    <div class="spinner"></div>
+}
+
+@code {
+    private bool loading { get; set; } = true;
+
+    [CascadingParameter]
+    public AuthManager authManager { get; set; }
+    [Parameter]
+    public ExhibitionDto? exhibition { get; set; }
+    [Inject]
+    private IOrdersProvider OrdersProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        loading = false;
+        StateHasChanged();
+    }
+    public static DateTime UnixTimeStampToDateTime(long unixTimeStamp)
+    {
+        return DateTimeOffset.FromUnixTimeMilliseconds(unixTimeStamp).DateTime;
+    }
+
+    private async void AddOrder()
+    {
+        loading = true;
+        StateHasChanged();
+        await OrdersProvider.Add(new OrderCreationDto {UserId = authManager.GetUser().Id, ExhibitionId = exhibition.Id, Cost = exhibition.Cost, Discount = 0});
+        loading = false;
+        StateHasChanged();
+    }
+}

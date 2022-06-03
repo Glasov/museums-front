@@ -1,0 +1,12 @@
+img.exhibit-image {
+    width: 500px;
+    border: 16px ridge #795548;
+}
+
+.full-description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}

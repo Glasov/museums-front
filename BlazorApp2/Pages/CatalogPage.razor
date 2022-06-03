@@ -1,0 +1,43 @@
+﻿@page "/catalog"
+@using BlazorApp2.Data.Dtos
+@using BlazorApp2.Services
+
+<PageTitle>Каталог</PageTitle>
+
+<h1>Каталог</h1>
+
+<CatalogGallery exhibitionItems=@exhibitionItems/>
+
+<div class="container-fluid text-center m-3">
+	<button class="btn btn-outline-dark" onclick=@LoadNextItems>
+		Загрузить ещё
+	</button>
+</div>
+
+@code {
+    private static int COUNT_PER_REQUEST = 6;
+    private int _offset { get; set; }
+    private List<ExhibitionItemDto>? exhibitionItems { get; set; }
+    [Inject]
+    private IExhibitionItemsProvider exhibitionItemsProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        _offset = 0;
+        LoadNextItems();
+    }
+
+    private async void LoadNextItems()
+    {
+        var result = await exhibitionItemsProvider.GetWithOffset(COUNT_PER_REQUEST, _offset);
+        _offset = _offset + COUNT_PER_REQUEST;
+        if (exhibitionItems != null)
+        {
+            exhibitionItems.AddRange(result);
+        }
+        else
+        {
+            exhibitionItems = result;
+        }
+        StateHasChanged();
+    }
+}

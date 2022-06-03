@@ -1,0 +1,50 @@
+﻿@using BlazorApp2.Data.Dtos
+@using System.Runtime.InteropServices
+@using BlazorApp2.Managers
+@using BlazorApp2.Services
+
+@if (authManager.IsAuthorized())
+{
+    <div class="container-fluid d-flex">
+        <div class="container">
+            <h3>Имя: @authManager.GetUser().Name</h3>
+        </div>
+        <div class="container">
+            <h3>Email: @authManager.GetUser().Email</h3>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h3>Заказы</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                @if (authManager.IsAdmin())
+                {
+                    <th scope="col">ID</th>
+                }
+                <th scope="col">Выставка</th>
+                <th scope="col">Дата заказа</th>
+                <th scope="col">Скидка</th>
+                <th scope="col">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var id in authManager.GetUser().OrderIds)
+                {
+                    <OrderInfo Id=@id/>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="container-fluid">
+        <h3>Необходимо войти в учётную запись или зарегистрироваться</h3>
+    </div>
+}
+
+@code {
+    [CascadingParameter]
+    public AuthManager authManager { get; set; }
+}

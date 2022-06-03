@@ -1,0 +1,6 @@
+div.exhibition-item {
+    border: 1px double black;
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 30px;
+}

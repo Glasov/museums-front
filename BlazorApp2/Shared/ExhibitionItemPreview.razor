@@ -1,0 +1,22 @@
+﻿@using BlazorApp2.Data.Dtos
+
+@if (exhibitionItem != null)
+{
+	<div class="col">
+    	<a href="/exhibition-item/@exhibitionItem.Id">
+    		<div class="card max-height-50 shadow-sm">
+    			<img src="@exhibitionItem.ImageUrl" alt="@exhibitionItem.Name">
+    			<div class="card-body">
+    				<p class="card-text">
+    					@exhibitionItem.Name
+    				</p>
+    			</div>
+    		</div>
+    	</a>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public ExhibitionItemDto? exhibitionItem { get; set; }
+}

@@ -1,0 +1,16 @@
+nav.navbar[b-8klt50xt3z] {
+    background: #F44336;
+}
+
+img.logo[b-8klt50xt3z] {
+    width: 40px;
+}
+
+ul.nav li a[b-8klt50xt3z],
+ul.nav li a:visited[b-8klt50xt3z] {
+    color: whitesmoke;
+}
+
+ul.nav li a:hover[b-8klt50xt3z] {
+    color: lightgray;
+}

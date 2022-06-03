@@ -1,0 +1,59 @@
+﻿@using BlazorApp2.Services
+@using System.Runtime.InteropServices
+@using BlazorApp2.Managers
+@inject NavigationManager _navigationManager
+
+<div class="card mb-3">
+    <div class="row g-0 d-flex align-items-center">
+        <div class="col-lg-8">
+            <div class="card-body py-5 px-md-5">
+                <div class="form-outline mb-4">
+                    <input type="email" id="email-input" class="form-control" @bind="@Email" />
+                    <label class="form-label" for="email-input">Email</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" id="password-input" class="form-control" @bind="@Password" />
+                    <label class="form-label" for="password-input">Пароль</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-block mb-4" onclick=@TryLogin>Вход</button>
+            </div>
+        </div>
+        @if (isError)
+        {
+            <p style="color:red;">Ошибка: не найдена учётная запись с таким паролем или почтой</p>
+        }
+    </div>
+</div>
+
+@code {
+    private string Email { get; set; }
+    private string Password { get; set; }
+    private bool isError { get; set; }
+    [Inject]
+    private IAuthService AuthService { get; set; }
+    [CascadingParameter]
+    public AuthManager authManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        isError = false;
+        StateHasChanged();
+    }
+
+    public async void TryLogin()
+    {
+        Console.Out.WriteLine("loggining: " + Email + " " + Password);
+        var loggedIn = await AuthService.Login(authManager, Email, Password);
+        
+        if (loggedIn)
+        {
+            _navigationManager.NavigateTo("/");
+        }
+        else
+        {
+            isError = true;
+        }
+        
+        StateHasChanged();
+    }
+}
